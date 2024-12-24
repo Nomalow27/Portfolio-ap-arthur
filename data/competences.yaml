@@ -1,0 +1,36 @@
+titre: "Compétences"
+
+competences:
+  - domaine: "Développement"
+    items:
+      - nom: "HTML"
+        niveau: 5 
+      - nom: "CSS"
+        niveau: 5
+      - nom: "PHP"
+        niveau: 4
+      - nom: "Python"
+        niveau: 3
+      - nom: "JavaScript"
+        niveau: 3
+  - domaine: "Réseaux"
+    items:
+      - nom: "Configuration réseau"
+        niveau: 4
+      - nom: "Analyse de trame"
+        niveau: 5
+  - domaine: "Langues"
+    items:
+      - nom: "Anglais"
+        niveau: 4
+      - nom: "Français"
+        niveau: 5
+      - nom: "Espagnol"
+        niveau: 3
+  - domaine: "Autres"
+    items:
+      - nom: "autodidacte"
+        niveau: 4
+      - nom: "Gestion de projets"
+        niveau: 5
+

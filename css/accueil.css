@@ -1,0 +1,590 @@
+* {
+    box-sizing: border-box; 
+}
+
+
+body{
+	background-color:black;
+	width:100%;
+	margin:0;
+    padding:0;
+    
+}
+
+.titre {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 25%;
+    object-fit: cover;
+    font-family: "titre";
+    max-width: 100%;
+ }
+.menu{
+    display: flex;             
+    padding:0;                 
+}
+
+.menunav .menu li {
+    list-style-type: none ;
+}
+.menunav .menu a{
+    display:block;                
+    min-width: 120px;                             
+    padding: 1.2rem 25px;           
+    text-align: center;              
+    color: #fff;                  
+    text-decoration: none;  
+    font-size: 14px; 
+    text-transform: uppercase;     
+
+}
+
+.menunav .menu a:hover{
+    border-bottom: 1px solid white;       
+
+}
+
+.image img {
+    border: none;
+    cursor: pointer;
+	width: 8%;
+    display: block;
+    margin: 0%; 
+    padding: 0%;
+    margin-top: 1%;
+    margin-left: 1%;
+   
+}
+
+.menu-image{
+    width: 100vw;
+    object-fit: cover; 
+    display: block; 
+    margin: 0; 
+    padding: 0;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed;
+    filter: brightness(0.7) contrast(1.2) saturate(1.2), blur(1px),grayscale(50%);
+    
+
+}
+
+
+.header{
+    display: grid;	
+    grid-template-columns: 2fr 1fr; 
+    padding: 0; 
+    color: white; 
+    margin:0;
+    align-items: center;
+    position:fixed;
+    background-color: rgb(0, 0, 0);
+    z-index: 15;
+
+}
+
+
+
+.presentation-container {
+    position: relative; 
+    width: 40%;
+    margin: -5% auto 0 auto; 
+    padding: 7%; 
+    padding-left: 10%;
+    background-image: url("../image/acc.gif"); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    text-align: center; 
+    color: white; 
+    z-index: 10; 
+}
+
+.presentation-text {
+    position: relative;
+    display: inline-block; 
+    right:35%;
+    margin-right: 40%;
+}
+
+
+.presentation-text h2 {
+    margin: 10px 0; 
+    font-size: 2em; 
+    font-weight: bold;
+}
+
+.presentation-text h3 {
+    margin: 2% 0 1%;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #555554; 
+}
+
+
+.presentation-text p {
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.6;
+
+}
+
+
+  
+.frise_chronologique {
+    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20%;
+    justify-items: center;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/fondneiggeee.webp");
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding:5%; 
+    padding-bottom:25%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.frise {
+    margin: 5px;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    align-items: center;
+    
+}
+
+/* Rendre l'image de fond visible dès le départ */
+.frise.développement {
+    background-image: url("../image/dev.png"); 
+    display: flex;/* Assurez-vous que le nom de l'image est correct */
+}
+
+
+
+
+.frise.réseaux {
+    display: flex;
+    background-image: url("../image/reseau.png"); /* Assurez-vous que le nom de l'image est correct */
+    
+}
+
+.frise.mathématiques-et-logique {
+    display: flex;
+    background-image: url("../image/maths.png"); /* Assurez-vous que le nom de l'image est correct */
+}
+
+.frise.langues {
+    display: flex;
+    background-image: url("../image/langue.png");
+}
+
+.frise.bureautique {
+    display: flex;
+    background-image: url("../image/bureau.png");
+}
+
+.frise.autres {
+    display: flex;
+    background-image: url("../image/projet.png");
+}
+
+/* Effet au survol */
+.frise:hover {
+    transform: scale(1.05);
+}
+
+.texte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    padding:20%;
+}
+
+.frise .item {
+    display: flex;
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    align-items: center; /* Aligne le texte et les étoiles sur la même ligne */
+    width: 80%; /* Ajuste la largeur de chaque item */
+    max-width: 600px; /* Largeur maximale de chaque item */
+    gap:10%;
+}
+
+/* Nom du domaine - visible par défaut */
+.domaine-titre {
+    text-transform: uppercase;
+    color: white;
+    font-family: "paragraphe";
+    text-align: center;
+    align-items: end;
+    background-color: rgb(19, 19, 19,0.1);
+    margin-left:20%;
+    margin-right: 20%;
+    padding:10%;
+    width:100%;
+    display:block;
+    text-decoration: none; 
+    margin-bottom: 5%;
+}
+
+
+
+/* Titre des compétences */
+.texte h1 {
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+}
+
+
+/* Lors du survol, les autres éléments (compétences et barre de progression) deviennent visibles */
+.frise:hover .texte {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.frise:hover .domaine-titre{
+    visibility: hidden;
+}
+
+
+
+.etoile {
+    margin-right: 5px; /* Espacement entre les étoiles */
+}
+
+.etoile.pleine {
+    color: #FFD700; /* Couleur dorée pour les étoiles pleines */
+}
+
+.etoile.vide {
+    color: #B0B0B0; /* Couleur grise pour les étoiles vides */
+}
+
+.comp-titre {
+    font-family: "sous-titre";
+    border-top: solid 1px rgba(129, 122, 122, 0.5);
+    border-bottom: solid 1px rgba(129, 122, 122, 0.5);
+    color: rgba(255, 253, 253, 0.8);
+    font-size: 150%;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+
+/* Grille pour l'affichage des réalisations */
+.casting {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colonnes */
+    gap: 2%; /* Espacement entre les colonnes */
+    margin: 2%;
+    padding: 1%;
+  }
+  
+  /* Style des images dans chaque section */
+  .casting img {
+    width: 100%; 
+    height: 500px;
+    filter: grayscale(1); /* Noir et blanc */
+    opacity: 0.6; /* Transparence */
+    display: block;
+    margin: auto;
+    padding-bottom: 10%;
+    padding-top: 10%;
+    object-fit: cover; /* Garde les proportions de l'image */
+    background-repeat: no-repeat;
+  }
+  
+  /* Style des sections de chaque projet */
+  .casting section { 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(80, 78, 78, 0.5);
+    padding: 5%;
+    align-items: center; /* Centre tout le contenu dans la section */
+    justify-content: center;
+  }
+  
+  /* Style du texte dans le caption */
+  .casting figcaption {
+    color: white;
+    padding: 0;
+    font-family: "paragraphetexte";
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 10px; /* Un peu d'espace sous le texte */
+  }
+  
+  /* Style spécifique pour inverser l'ordre du texte */
+  .casting .texte-inversé {
+    order: -1; /* Inverse l'ordre du texte */
+    align-self: flex-end; /* Aligne le texte en bas */
+    text-align: center; /* Centre le texte */
+  }
+  
+  /* Assurez-vous que le texte est en bas dans les figures */
+  .casting figure {
+    align-self: flex-end; /* Aligne le contenu en bas de la figure */
+  }
+  
+  /* Style du paragraphe de description (ce texte est dans <p>) */
+  .casting p {
+    color: white;
+    font-family: "paragraphetexte";
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .frise_chronologique_formations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20%;
+    justify-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/fondneiggeee.webp");
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 5%;
+    padding-bottom: 25%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+}
+
+.frise_formation {
+    margin: 5px;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    align-items: center;
+}
+
+.frise_formation:hover {
+    transform: scale(1.05);
+}
+
+.texte_formation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+    padding: 20%;
+}
+
+.frise_formation:hover .texte_formation {
+    opacity: 1;
+    visibility: visible;
+}
+
+.frise_formation:hover .formation-titre {
+    visibility: hidden;
+}
+
+.formation-titre {
+    text-transform: uppercase;
+    color: white;
+    font-family: "paragraphe";
+    text-align: center;
+    background-color: rgba(19, 19, 19, 0.1);
+    padding: 10%;
+    width: 100%;
+    display: block;
+    text-decoration: none; 
+    margin-bottom: 5%;
+}
+
+.details_formation {
+    text-align: center;
+}
+
+.details_formation h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.details_formation p {
+    font-size: 14px;
+    color: white;
+    margin: 5px 0;
+}
+ 
+
+
+
+
+
+/* Titre de la section Contact */
+#contact-container .comp-titre {
+    font-family: "sous-titre"; /* Police définie pour le titre */
+    border-top: solid 1px rgba(129, 122, 122, 0.5);  /* Bordure supérieure avec une couleur gris clair */
+    border-bottom: solid 1px rgba(129, 122, 122, 0.5); /* Bordure inférieure avec une couleur gris clair */
+    color: rgba(255, 253, 253, 0.8); /* Couleur de texte claire avec un peu de transparence */
+    font-size: 150%; /* Taille du texte augmentée de 150% */
+    text-align: center; /* Alignement du texte au centre */
+    text-transform: uppercase; /* Texte transformé en majuscules */
+    margin-right: 40%; /* Marges à droite et à gauche pour centrer le titre */
+    margin-left: 40%; /* Marges à gauche pour centrer le titre */
+    margin-top: 3%; /* Espacement au-dessus du titre */
+    padding: 10px 0; /* Espacement vertical pour le titre */
+}
+
+/* Conteneur des contacts */
+#contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Élément de contact */
+.contact-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    margin: 20px;
+}
+
+/* Effet de survol des éléments de contact */
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre des éléments de contact (h3) */
+.contact-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Description des éléments de contact (p) */
+.contact-item p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Liens dans les éléments de contact */
+.contact-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Changement de couleur au survol des liens */
+.contact-item a:hover {
+    color: #0056b3;
+}
+
+/* Animation d'apparition du titre */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styles responsives pour les petits écrans */
+@media screen and (max-width: 768px) {
+    #contact-container {
+        padding: 10px;
+    }
+
+    #contact-container .contact-item {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #contact-container .comp-titre {
+        font-size: 28px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Style du footer */
+#bas {
+    background-color: #000000;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+#bas p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style des icônes des réseaux sociaux */
+.reseaux img {
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.reseaux img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Texte du bas */
+#fin {
+    font-size: 14px;
+    margin-top: 20px;
+    border-top: 1px solid #bdc3c7;
+    padding-top: 10px;
+    color: #ffffff;
+}

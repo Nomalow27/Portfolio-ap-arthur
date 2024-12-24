@@ -1,0 +1,11 @@
+navigation:
+  - name: "Accueil"
+    link: "#accueil"  # Lien d'ancrage vers la section Accueil
+  - name: "Compétences"
+    link: "#competences"  # Lien d'ancrage vers la section Compétences
+  - name: "Réalisations"
+    link: "#realisation"  # Lien d'ancrage vers la section Réalisations
+  - name: "Formation"
+    link: "#formation"  # Lien d'ancrage vers la section Formation
+  - name: "Contact"
+    link: "#contact"  # Lien d'ancrage vers la section Contact

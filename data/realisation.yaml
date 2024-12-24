@@ -1,0 +1,18 @@
+titre: "realisations"
+
+realisations:
+  - nom: "Site Web"
+    description: "Création d'un site web."
+    texte_inversé: true
+  
+  - nom: "Serveur GTA RP"
+    description: "Création de A à Z du serveur GTA RP"
+    texte_inversé: true
+  
+  - nom: "Boutique en ligne"
+    description: "Création d'une boutique en ligne via Shopify"
+    texte_inversé: true
+
+  - nom: "Création de Script FiveM"
+    description: "Développement de scripts personnalisés pour serveur FiveM."
+    texte_inversé: false

@@ -1,0 +1,15 @@
+titre: "Formations"
+
+formations:
+  - nom: "Seconde"
+    annee: "2021 - 2022"
+    lieu: "Jeanne d'arc"
+  - nom: "Premiere"
+    annee: "2022 - 2023"
+    lieu: "Saint Ursule"
+  - nom: "Terminal"
+    annee: "2023 - 2024"
+    lieu: "Saint Ursule / Option SIG"
+  - nom: "BTS SIO"
+    annee: "2024 - 2025"
+    lieu: "Caen SUP"

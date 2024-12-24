@@ -1,0 +1,18 @@
+titre: "Contact"
+
+contacts:
+  - nom: "Email"
+    description: "nomalow@icloud.com"
+    lien: "mailto:nomalow@icloud.com"
+
+  - nom: "Discord"
+    description: "Connectez-vous avec moi sur Discord. Et ajoutez Nomalow"
+    lien: "https://discord.com/"
+
+  - nom: "GitHub"
+    description: "Découvrez mes projets open-source sur GitHub."
+    lien: "https://github.com/Nomalow27"
+
+  - nom: "Instagram"
+    description: "Suivez-moi sur Instagram pour des mises à jour."
+    lien: "https://www.instagram.com/frmt.arthur/"
